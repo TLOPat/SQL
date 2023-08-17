@@ -1,0 +1,28 @@
+-Create Store Database
+
+CREATE TABLE  STORE (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, sales INTEGER, returns INTEGER, price INTEGER);
+
+INSERT into STORE VALUES (1, "T-Shirt", 20, 10, 6, 10.99);
+INSERT into STORE VALUES (2, "Long Sleeve", 25, 13, 8, 15.99);
+INSERT into STORE VALUES (3, "Cargo Pants", 60, 48, 10, 30.00);
+INSERT into STORE VALUES (4, "Basketball Shoes", 70, 40, 0, 120.00);
+INSERT into STORE VALUES (5, "Slippers", 30, 10, 1, 15.00);
+INSERT into STORE VALUES (6, "Socks", 30, 23, 6, 5.99);
+INSERT into STORE VALUES (7, "Baseball Caps", 21, 13, 2, 20.99);
+INSERT into STORE VALUES (8, "Hiking Boots", 55, 25, 11, 99.99);
+INSERT into STORE VALUES (9, "Jean Jackets", 35, 5, 0, 32.55);
+INSERT into STORE VALUES (10, "Pickle Ball Paddles", 68, 60, 2, 40);
+INSERT into STORE VALUES (11, "Football Jerseys", 63, 34, 15, 59.99);
+INSERT into STORE VALUES (12, "Basketball Jerseys", 23, 8, 1, 99.99);
+INSERT into STORE VALUES (13, "Hockey Sticks", 10, 2, 0, 55);
+INSERT into STORE VALUES (14, "Gum", 22, 22, 0, 5.99);
+INSERT into STORE VALUES (15, "Deodorant", 64, 51, 0, 22.99);
+
+-display the database ordered by price
+SELECT * FROM STORE ORDER BY price;
+
+-what is the average amount of sales?
+SELECT AVG(Sales) FROM STORE;
+
+-what are the top 5 most sold items
+SELECT name, price, sales FROM store order by sales desc limit 5; 
